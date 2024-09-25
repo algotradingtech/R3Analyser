@@ -104,4 +104,4 @@ webencodings==0.5.1
 xgboost==2.0.3
 xyzservices==2024.6.0
 yarg==0.1.9
-yfinance==0.2.40
+yfinance
