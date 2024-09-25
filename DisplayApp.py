@@ -25,7 +25,7 @@ class R3Widget:
             filePath =st.file_uploader("Choisissez un fichier CSV", type="csv")
             if st.button("load CSV"):
                 df = pd.read_csv(filePath)
-                df.rename(columns={col:col.capitalise()},inplace = True ) for col in df.columns)
+                [df.rename(columns={col:col.capitalise()},inplace = True ) for col in df.columns]
                 check_col_list= [ True if col in df.columns else False for col in ["Open","High","Low","Close"] ]
                 if all(check_col_list): 
                     df.to_csv("loaded_data.csv", index=False)
