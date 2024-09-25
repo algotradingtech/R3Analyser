@@ -26,7 +26,7 @@ class R3Widget:
             if st.button("load CSV"):
                 df = pd.read_csv(filePath)
                 df.to_csv("loaded_data.csv", index=False) 
-                st.success("Data correctly insert") if all(["Open","High","Low","Close'] in df.columns ) else st.error("Noms de colonne non comformes => ["Open","High","Low","Close']")
+                st.success("Data correctly insert") if all(["Open","High","Low","Close'] is  in df.columns ) else st.error("Noms de colonne non comformes => ["Open","High","Low","Close']")
                 st.write(df)
 
 
