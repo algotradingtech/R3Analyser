@@ -32,10 +32,7 @@ class R3Widget:
                     st.success("Data correctly insert")  
                 else:
                     st.error("Noms de colonne non comformes => [Open,High,Low,Close]")
-                df = st.experimental_data_editor(df)
-                if st.button("load CSV modifier"):
-                    df.to_csv("loaded_data.csv", index=False)
-                    st.success("Data correctly insert")  
+                    st.write(f'nom des colonnes{str(df.columns)}')
 
 
     def run_optim_r3_classifier_page(self):
