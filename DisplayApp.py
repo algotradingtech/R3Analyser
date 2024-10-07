@@ -32,13 +32,6 @@ class R3Widget:
                     st.success("Data correctly insert")  
                 else:
                     st.error("Noms de colonne non comformes => [Open,High,Low,Close]")
-                    edited_df = st.experimental_data_editor(df)
-                    check_col_list = [ True if col in edited_df.columns else False for col in ["Open","High","Low","Close"]
-                    if st.button("load new data with corect columns"): #and  all(check_col_list) :
-                        edited_df.to_csv("loaded_data.csv", index=False)
-                    #elif st.button("load new data with corect columns") and not all(check_col_list)  :
-                        #st.error("Noms de colonne non comformes => [Open,High,Low,Close]")
-                    
 
 
     def run_optim_r3_classifier_page(self):
