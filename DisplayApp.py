@@ -32,7 +32,7 @@ class R3Widget:
                     st.success("Data correctly insert")  
                 else:
                     st.error("Noms de colonne non comformes => [Open,High,Low,Close]")
-                    st.write(f'nom des colonnes{str(df.columns)}')
+                    st.write(f'{str(df.columns)}')
 
 
     def run_optim_r3_classifier_page(self):
