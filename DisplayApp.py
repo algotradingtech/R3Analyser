@@ -31,7 +31,7 @@ class R3Widget:
                     df.to_csv("loaded_data.csv", index=False)
                     st.success("Data correctly insert")  
                 else:
-                    st.error("Noms de colonne non comformes => [Open,High,Low,Close]")
+                    st.error("Noms de colonne non comformes {df.columns}=> [Open,High,Low,Close]")
 
 
     def run_optim_r3_classifier_page(self):
